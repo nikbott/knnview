@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive KNN Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>K-Nearest Neighbors Interactive Visualizer</h1>
+            <p class="subtitle">Explore machine learning classification in real-time</p>
+        </header>
+
+        <div class="canvas-wrapper">
+            <div id="sketch-container"></div>
+        </div>
+
+        <div id="controls" class="controls"></div>
+
+        <div class="info-panel">
+            <div class="info-card">
+                <h2><i class="fas fa-lightbulb"></i> About This Visualization</h2>
+                <p>This interactive demonstration shows how the K-Nearest Neighbors (KNN) algorithm classifies data points based on proximity. Observe how different parameters affect the classification:</p>
+                <ul>
+                    <li><strong>k-value:</strong> Number of neighboring points considered</li>
+                    <li><strong>Distance metric:</strong> How distance between points is calculated</li>
+                    <li><strong>Weighting:</strong> Influence of neighbors based on distance</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-cogs"></i> Algorithm Behavior</h2>
+                <div class="algorithm-points">
+                    <div>
+                        <h3><i class="fas fa-sitemap"></i> Decision Boundaries</h3>
+                        <p>The classification changes dynamically as the query point moves, revealing implicit decision boundaries formed by the training data.</p>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-tachometer-alt"></i> Parameter Effects</h3>
+                        <p>Adjust parameters to see how they impact classification sensitivity and boundary smoothness.</p>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-sync-alt"></i> Real-time Updates</h3>
+                        <p>All calculations update in real-time, showing immediate feedback for parameter changes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
